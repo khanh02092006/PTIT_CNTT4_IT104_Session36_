@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.task-manager-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #4A5568;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Form thêm công việc */
+.add-task-form .task-input {
+  flex-grow: 1;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #4299e1;
+}
+
+.add-button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.add-button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Bộ lọc */
+.filter-controls {
+  justify-content: space-between;
+}
+.filter-controls select, .filter-controls input {
+  flex-basis: 32%; /* Chia đều không gian */
+}
+
+
+/* Danh sách công việc */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  transition: box-shadow 0.2s;
+}
+
+.task-item:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.task-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-text {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 16px;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+.badge-cao {
+  background-color: #e53e3e; /* Đỏ */
+}
+
+.badge-trung-bình {
+  background-color: #dd6b20; /* Cam */
+}
+
+.badge-thấp {
+  background-color: #38a169; /* Xanh lá */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #718096;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.icon-button:hover {
+  color: #2d3748;
+}
